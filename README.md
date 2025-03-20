@@ -9,4 +9,4 @@ Stay tuned!
 ## Table of contents
 
 - Web
-  - [Static Site Generation](/content/Web/Static&#32;Site&#32;Generation.md)
+  - [Static Site Generation](./content/Web/Static&#32;Site&#32;Generation.md)
