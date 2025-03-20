@@ -1,3 +1,12 @@
-# Hello
+# Precious Gems
 
-It's a home page of my digital garden. It needs to be parsed and converted to HTML.
+Welcome to my digital garden. I'm going to keep here all of my thoughts about software engineering and other computer science related stuff.
+
+For now, it's a simple website hosted on GitHub pages and based on markdown files from my repository. In next days I will do some research about sync between GitHub and some note-taking apps.
+
+Stay tuned!
+
+## Table of contents
+
+- Web
+  - [Static Site Generation](./content/Web/Static%20Site20%Generation.html)
