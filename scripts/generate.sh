@@ -38,9 +38,9 @@ find content -type f -name '*.md' | while read -r file; do
       }
     }
     {
-      while (match($0, /# (.+)$/, arr)) {
+      while (match($0, /### (.+)$/, arr)) {
         # Replace the matched Markdown link with HTML anchor tag
-        print substr($0, 1, RSTART-1) "<h1>" arr[1] "</h1>"
+        print substr($0, 1, RSTART-1) "<h3>" arr[1] "</h3>"
         # Remove the processed part and continue
         $0 = substr($0, RSTART + RLENGTH)
       }
@@ -54,9 +54,9 @@ find content -type f -name '*.md' | while read -r file; do
       }
     }
     {
-      while (match($0, /### (.+)$/, arr)) {
+      while (match($0, /# (.+)$/, arr)) {
         # Replace the matched Markdown link with HTML anchor tag
-        print substr($0, 1, RSTART-1) "<h3>" arr[1] "</h3>"
+        print substr($0, 1, RSTART-1) "<h1>" arr[1] "</h1>"
         # Remove the processed part and continue
         $0 = substr($0, RSTART + RLENGTH)
       }
