@@ -11,4 +11,4 @@ I'm challenging myself to handle everything on my own, so all content generation
 - Bash
   - [awk](./Bash/awk.md)
 - Web
-  - [Static Site Generation](./Web/Static Site Generation.md)
+  - [Static Site Generation](./Web/static-site-generation.md)
