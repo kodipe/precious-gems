@@ -16,7 +16,13 @@ find content -type f -name '*.md' | while read -r file; do
   OUTPUT_FILE="${file%.*}.html"
 
   # Use awk to replace {{ content }} properly
-  awk -v content="$CONTENT" '{gsub(/\{\{ content \}\}/, content)}1' "$TEMPLATE" > "$OUTPUT_FILE"
+  awk -v content="$CONTENT" '
+    BEGIN
+    {match($0, /^# (.+)/, title)}
+    {gsub(/\{\{ content \}\}/, content)}
+    {gsub(/\{\{ docTitle \}\}/, title[0])}
+    { print }
+  ' "$TEMPLATE" > "$OUTPUT_FILE"
 
   echo "Processed: $file -> $OUTPUT_FILE"
 done
