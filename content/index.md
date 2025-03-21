@@ -8,5 +8,7 @@ I'm challenging myself to handle everything on my own, so all content generation
 
 ## Table of contents
 
+- Bash
+  - [awk](./Bash/awk.md)
 - Web
   - [Static Site Generation](./Web/Static Site Generation.md)
