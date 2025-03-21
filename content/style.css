@@ -34,6 +34,10 @@ main {
   margin: 0 auto;
 }
 
+main pre {
+  white-space: break-spaces;
+}
+
 footer {
   padding: 2rem 0;
   width: 800px;
