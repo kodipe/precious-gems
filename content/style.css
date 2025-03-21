@@ -18,6 +18,15 @@ a {
   color: lightseagreen;
 }
 
+a.external:after {
+  content: '';
+  height: 0.8rem;
+  width: 0.8rem;
+  display: inline-block;
+  background-image: url('./assets/external.svg');
+  backgroud-size: 0.8rem;
+}
+
 .header {
   width: 800px;
   margin: 0 auto;
