@@ -37,6 +37,22 @@ find content -type f -name '*.md' | while read -r file; do
         $0 = substr($0, RSTART + RLENGTH)
       }
     }
+    {
+      while (match($0, /^# (.+)$/, arr)) {
+        # Replace the matched Markdown link with HTML anchor tag
+        print substr($0, 1, RSTART-1) "<h1>" arr[1] "</h1>"
+        # Remove the processed part and continue
+        $0 = substr($0, RSTART + RLENGTH)
+      }
+    }
+    {
+      while (match($0, /^## (.+)$/, arr)) {
+        # Replace the matched Markdown link with HTML anchor tag
+        print substr($0, 1, RSTART-1) "<h2>" arr[1] "</h2>"
+        # Remove the processed part and continue
+        $0 = substr($0, RSTART + RLENGTH)
+      }
+    }
     {print}
   ' "$TEMPLATE" > "$OUTPUT_FILE"
 
