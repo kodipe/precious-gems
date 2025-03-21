@@ -18,27 +18,34 @@ a {
   color: lightseagreen;
 }
 
-header {
+.header {
   width: 800px;
   margin: 0 auto;
   padding: 6rem 0 2rem 0;
 }
 
-header h2 {
+.header .logo {
   font-size: 1.5rem;
   margin: 0;
+  display: flex;
+  gap: 0.5rem;
 }
 
-main {
+.header .logo img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.main {
   width: 800px;
   margin: 0 auto;
 }
 
-main pre {
+.main pre {
   white-space: break-spaces;
 }
 
-footer {
+.footer {
   padding: 2rem 0;
   width: 800px;
   margin: 0 auto;
