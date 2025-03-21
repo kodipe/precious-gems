@@ -18,6 +18,12 @@ a {
   color: lightseagreen;
 }
 
+.main a {
+  background: #EEEEEE;
+  padding: 0.1rem;
+  border-radius: 5px;
+}
+
 a.external:after {
   content: '';
   height: 0.8rem;
