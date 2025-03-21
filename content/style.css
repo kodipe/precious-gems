@@ -20,8 +20,13 @@ a {
 
 .main a {
   background: #EEEEEE;
-  padding: 0.1rem;
+  padding: 0.1rem 0.3rem;
   border-radius: 5px;
+  transition: .3s ease all;
+}
+
+.main a:hover {
+  opacity: 0.8;
 }
 
 a.external:after {
