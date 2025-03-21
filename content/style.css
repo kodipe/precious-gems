@@ -25,6 +25,7 @@ a.external:after {
   display: inline-block;
   background-image: url('./assets/external.svg');
   backgroud-size: 0.8rem;
+  margin: 0 0 0 0.2rem;
 }
 
 .header {
