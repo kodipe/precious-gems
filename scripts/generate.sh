@@ -17,8 +17,9 @@ find content -type f -name '*.md' | while read -r file; do
 
   # Use awk to replace {{ content }} properly
   awk -v content="$CONTENT" '
-    BEGIN
-    {match($0, /^# (.+)/, title)}
+    BEGIN {
+      match($0, /^# (.+)/, content)
+    }
     {gsub(/\{\{ content \}\}/, content)}
     {gsub(/\{\{ docTitle \}\}/, title[0])}
     { print }
