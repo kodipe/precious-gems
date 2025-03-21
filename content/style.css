@@ -29,6 +29,12 @@ a {
   margin: 0;
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.header .logo a {
+  color: #000000;
+  text-decoration: none;
 }
 
 .header .logo img {
