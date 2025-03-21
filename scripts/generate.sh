@@ -19,9 +19,9 @@ find content -type f -name '*.md' | while read -r file; do
   awk -v content="$CONTENT" '
     BEGIN {
       match(content, /^# (.*)$/, title)
+      gsub(/\{\{ docTitle \}\}/, title[0])
     }
     {gsub(/\{\{ content \}\}/, content)}
-    {gsub(/\{\{ docTitle \}\}/, title[0])}
     { print }
   ' "$TEMPLATE" > "$OUTPUT_FILE"
 
