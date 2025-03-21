@@ -21,7 +21,7 @@ find content -type f -name '*.md' | while read -r file; do
   awk -v content="$CONTENT" -v title="$DOC_TITLE" '
     {gsub(/\{\{ docTitle \}\}/, title)}
     {gsub(/\{\{ content \}\}/, content)}
-    {gsub(/\[([^\]]+)\]\([^\)]+\)/, "<a href=\"\2\">\1</a>")}
+    {gensub(/\[([^\]]+)\]\([^\)]+\)/, "<a href=\"\\2\">\\1</a>", 0)}
     {print}
   ' "$TEMPLATE" > "$OUTPUT_FILE"
 
