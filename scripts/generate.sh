@@ -37,9 +37,6 @@ find content -type f -name '*.md' | while read -r file; do
         $0 = substr($0, RSTART + RLENGTH)
       }
     }
-    /^# /   { print "<h1>" substr($0, 3) "</h1>" }
-    /^## /  { print "<h2>" substr($0, 4) "</h2>" }
-    /^### / { print "<h3>" substr($0, 5) "</h3>" }
     {print}
   ' "$TEMPLATE" > "$OUTPUT_FILE"
 
