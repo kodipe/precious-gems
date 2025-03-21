@@ -32,7 +32,7 @@ find content -type f -name '*.md' | while read -r file; do
     {
       while (match($0, /\[([^\]]+)\]\(([^\)]+)\)/, arr)) {
         # Replace the matched Markdown link with HTML anchor tag
-        print substr($0, 1, RSTART-1) "<a class=\"external\" href=\"" arr[2] "\">" arr[1] "</a>"
+        print substr($0, 1, RSTART-1) "<a class=\"external\" target=\"__blank\" href=\"" arr[2] "\">" arr[1] "</a>"
         # Remove the processed part and continue
         $0 = substr($0, RSTART + RLENGTH)
       }
