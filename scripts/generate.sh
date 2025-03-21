@@ -8,7 +8,7 @@ if [ ! -f "$TEMPLATE" ]; then
   exit 1
 fi
 
-find content -type f | while read -r file; do
+find content -type f -name '*.md' | while read -r file; do
   # Read the content of the current file
   CONTENT=$(cat "$file")
 
