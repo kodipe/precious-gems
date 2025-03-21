@@ -22,10 +22,9 @@ find content -type f -name '*.md' | while read -r file; do
     {gsub(/\{\{ docTitle \}\}/, title)}
     {gsub(/\{\{ content \}\}/, content)}
     {
-      # Replace all relative markdown links to it's html representation
       while (match($0, /\[([^\]]+)\]\(\.([^\)]+)\.md\)/, arr)) {
         # Replace the matched Markdown link with HTML anchor tag
-        print substr($0, 1, RSTART-1) "<a href=\"https://kodipe.github.io/precious-gems/" arr[2] ".html\">" arr[1] "</a>"
+        print substr($0, 1, RSTART-1) "<a href=\"." arr[2] ".html\">" arr[1] "</a>"
         # Remove the processed part and continue
         $0 = substr($0, RSTART + RLENGTH)
       }
